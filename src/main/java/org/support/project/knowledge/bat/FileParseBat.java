@@ -217,8 +217,14 @@ public class FileParseBat extends AbstractBat {
             if (StringUtils.isEmpty(extension)) {
                 String mime = Files.probeContentType(tmp.toPath());
                 MimeTypes allTypes = MimeTypes.getDefaultMimeTypes();
-                MimeType mimeType = allTypes.forName(mime);
-                String mimeExtention = mimeType.getExtension(); // Mimeから拡張子判定
+                String mimeExtention = "";
+                try {
+                    MimeType mimeType = allTypes.forName(mime);
+                    mimeExtention = mimeType.getExtension(); // Mimeから拡張子判定
+                } catch (Exception e) {
+                    LOG.error("allTypes.forNname: exception was thrown.", e);
+
+                }
                 if (StringUtils.isNotEmpty(mimeExtention)) {
                     name.append(".").append(mimeExtention);
                     Files.move(tmp.toPath(), Paths.get(name.toString()), StandardCopyOption.REPLACE_EXISTING);
