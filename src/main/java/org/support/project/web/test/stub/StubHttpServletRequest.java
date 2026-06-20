@@ -48,6 +48,7 @@ public class StubHttpServletRequest implements HttpServletRequest {
 
     /** エンコード */
     private String characterEncoding;
+    private String contentType;
     /** ContextPath */
     private String contextPath;
     
@@ -276,7 +277,11 @@ public class StubHttpServletRequest implements HttpServletRequest {
 
     @Override
     public String getContentType() {
-        throw new NotImplementedException("NotImplemented");
+        return contentType;
+    }
+
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
     }
 
 
