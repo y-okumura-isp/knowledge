@@ -58,11 +58,18 @@ The work should be split across multiple commits and may span multiple sessions,
 
 ## TODO
 
-- [ ] Start with the low-risk libraries, likely `gson` or `httpclient`.
+- [x] Start with the low-risk libraries, likely `gson` or `httpclient`.
 - [ ] After each upgrade, note the affected source files and any API changes.
-- [ ] Keep one commit per dependency group when practical.
+- [x] Keep one commit per dependency group when practical.
 - [ ] If a dependency update forces runtime image changes, update `Dockerfile` or `docker-compose.yml` in the same commit.
 - [ ] Record any blockers or follow-up work in this file so the next session can continue cleanly.
+
+## Progress
+
+- `gson` updated to `2.10.1` and verified with `./launch.sh --build-only`.
+- `httpclient` updated to `4.5.14`.
+- Added `HttpLogicTest` to cover proxy and non-proxy `createHttpClient()` behavior.
+- Full build and UT run pass on Java 11.
 
 ## Notes
 
