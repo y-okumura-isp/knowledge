@@ -12,6 +12,13 @@ This repository is **Knowledge**, a Java web application packaged as a WAR.
 - Keep changes small and aligned with the current codebase; this is an older application with legacy dependencies.
 - Avoid upgrading core tooling, frameworks, or dependency versions unless the task explicitly asks for it.
 
+## Work Items
+
+- Use `work-items/` for active change requests and implementation notes.
+- Move completed items to `work-items/done/` when the work is finished.
+- Keep `work-items/` focused on reusable instructions, acceptance criteria, and verification steps.
+- Do not use `work-items/` for scratch notes that are only useful during a single session.
+
 ## Development Flow
 
 - If the `third_party/markedj` directory is missing, `./launch.sh` will clone it automatically.
