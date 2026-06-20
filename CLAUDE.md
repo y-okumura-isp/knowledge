@@ -23,6 +23,7 @@ This repository is **Knowledge**, a Java web application packaged as a WAR.
 
 - Main app code lives under `src/main/java` and `src/main/webapp`.
 - Configuration and SQL live under `src/main/resources`.
+- `third_party/markedj` is a maintained vendored dependency in this workspace and may also be modified when needed.
 - Build artifacts and local state such as `target/`, `.m2/`, `.postgres/`, `.es_data/`, and `.knowledge/` are ignored by git.
 
 ## Verification
