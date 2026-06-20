@@ -1,4 +1,4 @@
-FROM maven:3.8.4-jdk-11
+FROM maven:3.9.9-eclipse-temurin-11
 
 # install git
 RUN apt-get -y update && apt-get -y install git
@@ -8,5 +8,4 @@ WORKDIR /usr/src/mymaven/
 ENTRYPOINT []
 
 VOLUME /root/.m2
-
 
