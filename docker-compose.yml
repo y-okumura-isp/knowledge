@@ -20,7 +20,7 @@ services:
     entrypoint: ''
     volumes:
       - $PWD:/usr/src/mymaven
-      - ${KNOWLEDGE_HOME}.m2:/root/.m2
+      - $PWD/.m2:/usr/src/mymaven/.m2
 
   tomcat:
     image: tomcat:9.0.64-jre11-temurin-focal
@@ -87,4 +87,3 @@ services:
       ELASTICSEARCH_URL: 'http://elasticsearch:9200'
       XPACK_MONITORING_ELASTICSEARCH_URL: 'http://elasticsearch:9200'
       XPACK_SECURITY_ENABLED: 'false'
-
