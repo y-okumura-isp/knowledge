@@ -91,6 +91,13 @@ Next session starts from this point:
 - Keep using `./launch.sh --build-only` after each dependency group.
 - If a dependency forces runtime image changes, update `Dockerfile` or `docker-compose.yml` in the same change.
 
+Session switch point:
+
+- Current code changes are limited to dependency declarations and direct `commons-lang` namespace updates.
+- Main verification command remains `./launch.sh --build-only`.
+- Browser-level validation has also been performed separately by the user and was OK.
+- Resume with a larger shared library upgrade, likely `tika-parsers`, `lucene`, or `pegdown` depending on the next blast-radius check.
+
 ## Notes
 
 - Java 11 migration is already complete and verified.
