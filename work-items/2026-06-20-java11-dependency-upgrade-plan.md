@@ -77,6 +77,7 @@ The work should be split across multiple commits and may span multiple sessions,
 - `commons-lang` migrated to `commons-lang3` `3.17.0`.
 - Updated source imports and wrapper classes to the `org.apache.commons.lang3` namespace.
 - Full build and UT run pass on Java 11 after the `commons-lang3` migration.
+- `pegdown` removed from `pom.xml` and the legacy `MarkdownLogic` branch/imports were deleted.
 
 ## Handoff
 
