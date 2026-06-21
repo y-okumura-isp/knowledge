@@ -69,7 +69,27 @@ The work should be split across multiple commits and may span multiple sessions,
 - `gson` updated to `2.10.1` and verified with `./launch.sh --build-only`.
 - `httpclient` updated to `4.5.14`.
 - Added `HttpLogicTest` to cover proxy and non-proxy `createHttpClient()` behavior.
-- Full build and UT run pass on Java 11.
+- `commons-fileupload` updated to `1.5`.
+- Added `MultipartFilterTest` for multipart pass-through and stub response coverage.
+- `javassist` updated to `3.29.2-GA`.
+- No source changes were required for the `javassist` bump.
+- Full build and UT run pass on Java 11 after the `javassist` upgrade.
+- `commons-lang` migrated to `commons-lang3` `3.17.0`.
+- Updated source imports and wrapper classes to the `org.apache.commons.lang3` namespace.
+- Full build and UT run pass on Java 11 after the `commons-lang3` migration.
+
+## Handoff
+
+Next session starts from this point:
+
+- Java 11 baseline is already in place and verified.
+- `gson`, `httpclient`, and `commons-fileupload` have been upgraded.
+- `javassist` has now been upgraded as well.
+- `commons-lang` has been migrated to `commons-lang3`.
+- UT coverage was added for `HttpLogic` and multipart handling, and the build is green.
+- The next likely candidate is one of the larger shared libraries.
+- Keep using `./launch.sh --build-only` after each dependency group.
+- If a dependency forces runtime image changes, update `Dockerfile` or `docker-compose.yml` in the same change.
 
 ## Notes
 
