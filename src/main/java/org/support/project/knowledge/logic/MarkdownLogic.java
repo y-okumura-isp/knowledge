@@ -13,11 +13,6 @@ import java.util.Date;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
-
-import org.pegdown.Extensions;
-import org.pegdown.LinkRenderer;
-import org.pegdown.PegDownProcessor;
-import org.pegdown.ast.AnchorLinkNode;
 import org.support.project.common.exception.ParseException;
 import org.support.project.common.log.Log;
 import org.support.project.common.log.LogFactory;
@@ -33,7 +28,6 @@ public class MarkdownLogic {
     /** ログ */
     private static final Log LOG = LogFactory.getLog(MarkdownLogic.class);
 
-    public static final int ENGINE_PEGDOWN = 1;
     public static final int ENGINE_MARKEDJS = 2;
     public static final int ENGINE_MARKEDJ = 3; // スライド表示用の独自拡張（デフォルト）
 
@@ -67,8 +61,6 @@ public class MarkdownLogic {
         MarkDown result = new MarkDown();
         if (engine == ENGINE_MARKEDJS) {
             LOG.error("marked.js parser was deprecated");
-        } else if (engine == ENGINE_PEGDOWN) {
-            LOG.error("PegDown parser was deprecated");
         }
         markdownToHtmlOnMarkedJ(markdown, result);
         return sanitize(markdown, result);

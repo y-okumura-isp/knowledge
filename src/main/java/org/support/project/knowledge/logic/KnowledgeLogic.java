@@ -791,7 +791,7 @@ public class KnowledgeLogic {
                     } else {
                         String content = HtmlUtils.escapeHTML(entity.getContent());
                         entity.setContent(content);
-                        // entity.setContent(org.apache.commons.lang.StringUtils.abbreviate(entity.getContent(),
+                        // entity.setContent(org.apache.commons.lang3.StringUtils.abbreviate(entity.getContent(),
                         // LuceneSearcher.CONTENTS_LIMIT_LENGTH));
                     }
                     entity.setScore(searchResultValue.getScore());
