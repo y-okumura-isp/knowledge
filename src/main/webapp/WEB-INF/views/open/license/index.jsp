@@ -22,7 +22,7 @@
 
 <script>
 $(document).ready(function(){
-    hljs.initHighlightingOnLoad();
+    hljs.highlightAll();
     marked.setOptions({
         langPrefix: '',
         highlight: function(code, lang) {
@@ -40,7 +40,7 @@ $(document).ready(function(){
         if(language.match(/^mermaid/)){
            return '<div class="mermaid">'+code+'</div>';
         }else{
-           return '<pre><code>' + hljs.highlightAuto(code).value + '</code></pre>';
+            return '<pre><code>' + hljs.highlightAuto(code).value + '</code></pre>';
         }
       };
 
@@ -66,4 +66,3 @@ $(document).ready(function(){
 </c:param>
 
 </c:import>
-

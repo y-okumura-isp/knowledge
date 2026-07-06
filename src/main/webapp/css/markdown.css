@@ -389,6 +389,7 @@
 .markdown pre code {
     margin: 0;
     padding: 10px;
+    display: block;
     white-space: pre;
     border: none;
 }
@@ -427,4 +428,3 @@
     margin: 10px 10px 10px 10px;
     border-radius: 5px;
 }
-
