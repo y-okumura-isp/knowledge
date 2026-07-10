@@ -9,7 +9,7 @@
     "respond": "1.4.2",
     "notifyjs": "0.3.2",
     "marked": "0.3.4",
-    "highlightjs": "8.9.1",
+    "highlight.js": "https://github.com/highlightjs/highlight.js.git#11.11.1",
     "bootbox": "4.4.0",
     "bootstrap-tagsinput": "https://github.com/bootstrap-tagsinput/bootstrap-tagsinput.git#v0.4.2",
     "bootstrap3-typeahead": "3.1.1",

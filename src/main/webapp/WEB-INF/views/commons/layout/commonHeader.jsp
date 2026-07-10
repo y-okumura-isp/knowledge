@@ -6,6 +6,16 @@
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
+<%! private String normalizeHighlightTheme(String theme) {
+    if ("darkula".equals(theme)) {
+        return "dark";
+    }
+    if ("kimbie.light".equals(theme)) {
+        return "kimbie-light";
+    }
+    return theme;
+} %>
+
 <% JspUtil jspUtil = new JspUtil(request, pageContext); %>
 
 <meta charset="UTF-8">
@@ -44,18 +54,27 @@
 <% } %>
 
 <% if (StringUtils.isNotEmpty(jspUtil.out("highlight"))) { %>
-<link rel="stylesheet" href="<%= request.getContextPath() %>/bower/highlightjs/styles/<%= jspUtil.out("highlight") %>.css" />
+<link rel="stylesheet" href="<%= request.getContextPath() %>/bower/highlight.js/src/styles/<%= normalizeHighlightTheme(jspUtil.out("highlight")) %>.css" />
 <% } else { %>
-<link rel="stylesheet" href="<%= request.getContextPath() %>/bower/highlightjs/styles/<%= jspUtil.cookie(SystemConfig.COOKIE_KEY_HIGHLIGHT, "darkula") %>.css" />
+<link rel="stylesheet" href="<%= request.getContextPath() %>/bower/highlight.js/src/styles/<%= normalizeHighlightTheme(jspUtil.cookie(SystemConfig.COOKIE_KEY_HIGHLIGHT, "darkula")) %>.css" />
 <% } %>
 
-<link rel="stylesheet" href="<%= request.getContextPath() %>/bower/font-awesome/css/font-awesome.min.css" />
-<link rel="stylesheet" href="<%= request.getContextPath() %>/bower/flag-icon-css/css/flag-icon.min.css" />
+<style>
+pre code.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 1em;
+}
 
-<!-- build:css(src/main/webapp) css/page-common.css -->
-<link rel="stylesheet" href="<%= request.getContextPath() %>/bower/jquery-oembed-all/jquery.oembed.css" />
-<link rel="stylesheet" href="<%= request.getContextPath() %>/css/common.css" />
-<!-- endbuild -->
+code.hljs {
+    padding: 3px 5px;
+}
+</style>
+
+<link rel="stylesheet" href="<%= request.getContextPath() %>/bower/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="<%= request.getContextPath() %>/bower/flag-icons/css/flag-icons.min.css" />
+
+<link rel="stylesheet" href="<%= request.getContextPath() %>/css/page-common-cab8e43fcc.css"/>
 
 <!--[if lt IE 9]>
     <script src="<%= request.getContextPath() %>/bower/html5shiv/dist/html5shiv.min.js"></script>

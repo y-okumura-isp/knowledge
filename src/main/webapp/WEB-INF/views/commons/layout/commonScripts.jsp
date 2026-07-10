@@ -9,25 +9,9 @@
 
 <% JspUtil jspUtil = new JspUtil(request, pageContext); %>
 
-<!-- build:js(src/main/webapp) js/page-common.js -->
-<script type="text/javascript" src="<%= request.getContextPath() %>/bower/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="<%= request.getContextPath() %>/bower/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<%= request.getContextPath() %>/bower/bluebird/js/browser/bluebird.min.js"></script>
+<script src="<%= request.getContextPath() %>/js/page-common-15cba9b9b5.js"></script>
 
-<script type="text/javascript" src="<%= request.getContextPath() %>/bower/bootbox/bootbox.js"></script>
-
-<script type="text/javascript" src="<%= request.getContextPath() %>/bower/notifyjs/dist/notify.min.js"></script>
-<script type="text/javascript" src="<%= request.getContextPath() %>/bower/notifyjs/dist/notify-combined.min.js"></script>
-<script type="text/javascript" src="<%= request.getContextPath() %>/bower/notifyjs/dist/styles/bootstrap/notify-bootstrap.js"></script>
-
-<script type="text/javascript" src="<%= request.getContextPath() %>/bower/highlightjs/highlight.pack.js"></script>
-
-<script type="text/javascript" src="<%= request.getContextPath() %>/bower/jquery-oembed-all/jquery.oembed.js"></script>
-
-<script type="text/javascript" src="<%= request.getContextPath() %>/bower/jstzdetect/jstz.min.js"></script>
-
-<script type="text/javascript" src="<%= request.getContextPath() %>/js/common.js"></script>
-<!-- endbuild -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
 
 <% if (jspUtil.is(Boolean.TRUE, "desktopNotify")) { %>
 <script type="text/javascript" src="<%= request.getContextPath() %>/js/notification.js"></script>

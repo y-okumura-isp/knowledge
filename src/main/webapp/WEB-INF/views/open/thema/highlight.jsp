@@ -5,6 +5,14 @@
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <% JspUtil jspUtil = new JspUtil(request, pageContext); %>
+<% String highlightTheme = jspUtil.out("highlight");
+if ("darkula".equals(highlightTheme)) {
+    highlightTheme = "dark";
+}
+if ("kimbie.light".equals(highlightTheme)) {
+    highlightTheme = "kimbie-light";
+}
+%>
 
 <!DOCTYPE html>
 <html>
@@ -15,19 +23,27 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 
-<link rel="stylesheet" href="<%= request.getContextPath() %>/bower/highlightjs/styles/<%= jspUtil.out("highlight") %>.css" />
+<link rel="stylesheet" href="<%= request.getContextPath() %>/bower/highlight.js/src/styles/<%= highlightTheme %>.css" />
 <style>
+pre code.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 1em;
+}
+
+code.hljs {
+    padding: 3px 5px;
+}
+
 body {
     padding: 5px;
     overflow: hidden;
 }
 </style>
 
-<script type="text/javascript" src="<%= request.getContextPath() %>/bower/highlightjs/highlight.pack.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
 
-<script type="text/javascript">
-hljs.initHighlightingOnLoad();
-</script>
+<script type="text/javascript">hljs.highlightAll();</script>
 
 </head>
 
@@ -50,4 +66,3 @@ document.onmousedown=no_rclick;
 
 </body>
 </html>
-
