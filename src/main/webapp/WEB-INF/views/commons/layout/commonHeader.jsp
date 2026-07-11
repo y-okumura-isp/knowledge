@@ -72,7 +72,6 @@ code.hljs {
 </style>
 
 <link rel="stylesheet" href="<%= request.getContextPath() %>/bower/font-awesome/css/font-awesome.min.css" />
-<link rel="stylesheet" href="<%= request.getContextPath() %>/bower/flag-icons/css/flag-icons.min.css" />
 
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/page-common-cab8e43fcc.css"/>
 
