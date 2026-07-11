@@ -36,7 +36,7 @@ gulp.task('min', function() {
     .pipe(gulp.dest('target/knowledge/WEB-INF/views/'));
 });
 
-gulp.task('copy', ['copy:bootswatch', 'copy:bootswatch2', 'copy:highlightjs', 'copy:font-awesome', 'copy:flag-icon-css', 
+gulp.task('copy', ['copy:bootswatch', 'copy:bootswatch2', 'copy:highlightjs', 'copy:font-awesome', 
     'copy:html5shiv', 'copy:respond', 'copy:MathJax', 'copy:emoji-parser', 'copy:free-file-icons',
                    'copy:diff2html', 'copy:jsdiff', 'copy:jspdf', 'copy:pdfthema', 'copy:mermaid']);
 
@@ -64,12 +64,6 @@ gulp.task('copy:font-awesome', function() {
         'src/main/webapp/bower/font-awesome/**/*'
     ])
     .pipe(gulp.dest('target/knowledge/bower/font-awesome'));
-});
-gulp.task('copy:flag-icon-css', function() {
-    return gulp.src([
-        'src/main/webapp/bower/flag-icon-css/**/*'
-    ])
-    .pipe(gulp.dest('target/knowledge/bower/flag-icon-css'));
 });
 gulp.task('copy:html5shiv', function() {
     return gulp.src([

@@ -50,7 +50,6 @@
     <div class="row">
         <div class="col-sm-6">
             <h4>
-                <%--<i class="flag-icon flag-icon-us"></i>&nbsp; --%>
                 <%= Locale.ENGLISH.getDisplayName(jspUtil.locale()) %>
             </h4>
             <label for="en_title"><%= jspUtil.label("knowledge.mailtemplate.label.title") %></label>
@@ -60,7 +59,6 @@
         </div>
         <div class="col-sm-6">
             <h4>
-                <%--<i class="flag-icon flag-icon-jp"></i>&nbsp; --%>
                 <%= Locale.JAPANESE.getDisplayName(jspUtil.locale()) %>
             </h4>
             <label for="ja_title"><%= jspUtil.label("knowledge.mailtemplate.label.title") %></label>

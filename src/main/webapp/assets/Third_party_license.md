@@ -146,10 +146,6 @@
    - License: [MIT] https://github.com/starfishmod/jquery-oembed-all/blob/master/jquery.oembed.js
    - project-url: https://github.com/starfishmod/jquery-oembed-all
    
-- flag-icon-css
-   - License: [MIT] https://github.com/lipis/flag-icon-css/blob/master/LICENSE
-   - project-url: https://github.com/lipis/flag-icon-css
-
 - moment / moment-timezone
    - License: [MIT] https://github.com/moment/moment/blob/develop/LICENSE
    - project-url: http://momentjs.com/

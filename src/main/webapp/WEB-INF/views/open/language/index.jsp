@@ -29,7 +29,6 @@
     %>
     <li >
         <a href="<%= request.getContextPath() %>/lang/select/<%= language.getValue() %>" style="cursor: pointer;">
-            <%-- <i class="flag-icon flag-icon-<%= language.getLabel() %>"></i>&nbsp; --%>
             <%= jspUtil.locale(language.getValue()).getDisplayName(jspUtil.locale(language.getValue())) %>
         </a>
     </li>
